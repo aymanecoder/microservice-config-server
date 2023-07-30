@@ -1,3 +1,19 @@
+# Zipkin server configuration
+spring:
+  zipkin:
+    base-url: http://zipkin-server:9411
+
+# Enable Zipkin HTTP sender
+spring:
+  zipkin:
+    sender:
+      type: web
+
+# Enable Spring Sleuth
+spring:
+  sleuth:
+    enabled: true
+
 eureka:
   instance:
     prefer-ip-address: true
@@ -8,3 +24,9 @@ eureka:
       defaultZone: http://localhost:8761/eureka
 
 
+
+    
+management:
+  tracing:
+    sampling:
+      probability: 1.0
