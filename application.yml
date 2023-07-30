@@ -1,12 +1,3 @@
-# Zipkin server configuration
-spring:
-  zipkin:
-    base-url: http://zipkin-server:9411
-    sender:
-      type: web
-  sleuth:
-    enabled: true
-
 eureka:
   instance:
     prefer-ip-address: true
